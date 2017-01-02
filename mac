@@ -81,7 +81,7 @@ fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
   rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
 }
-
+export PATH=$PATH:~/.rbenv/bin
 ruby_version="$(find_latest_ruby)"
 eval "$(rbenv init -)"
 
